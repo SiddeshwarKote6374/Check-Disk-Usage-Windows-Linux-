@@ -1,0 +1,11 @@
+import socket
+
+s = socket.socket()
+host = "google.com"
+port = 443
+
+try:
+    s.connect((host, port))
+    print(f"Port {port} on {host} is OPEN")
+except:
+    print(f"Port {port} on {host} is CLOSED")
