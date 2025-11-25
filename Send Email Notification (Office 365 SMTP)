@@ -1,0 +1,10 @@
+import smtplib
+
+server = smtplib.SMTP("smtp.office365.com", 587)
+server.starttls()
+server.login("your_email@domain.com", "Password123")
+
+message = "Subject: Alert\n\nServer is down!"
+server.sendmail("your_email@domain.com", "admin@domain.com", message)
+
+server.quit()
