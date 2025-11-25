@@ -1,0 +1,11 @@
+import os
+
+service = "Spooler"
+
+cmd = f'sc query "{service}"'
+result = os.popen(cmd).read()
+
+if "RUNNING" in result:
+    print(service, "is running")
+else:
+    print(service, "is STOPPED")
