@@ -1,0 +1,10 @@
+import shutil
+
+total, used, free = shutil.disk_usage("/")
+
+percent_used = (used / total) * 100
+
+if percent_used > 80:
+    print("Warning! Disk usage above 80%")
+else:
+    print("Disk usage normal:", percent_used, "%")
