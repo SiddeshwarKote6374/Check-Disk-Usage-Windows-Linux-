@@ -1,0 +1,4 @@
+with open("system.log") as f:
+    for line in f:
+        if "error" in line.lower():
+            print("ERROR FOUND:", line.strip())
