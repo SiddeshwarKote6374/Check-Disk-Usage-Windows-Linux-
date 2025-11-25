@@ -1,0 +1,10 @@
+import os
+
+service = "WinDefend"
+
+output = os.popen(f"sc query {service}").read()
+
+if "RUNNING" in output:
+    print("Antivirus is active")
+else:
+    print("Antivirus is not running")
