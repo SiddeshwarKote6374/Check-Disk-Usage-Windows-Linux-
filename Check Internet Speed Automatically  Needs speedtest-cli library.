@@ -1,0 +1,5 @@
+import speedtest
+
+s = speedtest.Speedtest()
+print("Download:", s.download()/1_000_000, "Mbps")
+print("Upload:", s.upload()/1_000_000, "Mbps")
