@@ -1,0 +1,7 @@
+import os
+
+output = os.popen("net stats workstation").read()
+
+for line in output.split("\n"):
+    if "Statistics since" in line:
+        print("System Uptime:", line)
