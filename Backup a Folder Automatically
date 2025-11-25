@@ -1,0 +1,7 @@
+import shutil
+
+src = r"C:\Data"
+dst = r"C:\Backup\Data_Backup"
+
+shutil.copytree(src, dst)
+print("Backup completed.")
