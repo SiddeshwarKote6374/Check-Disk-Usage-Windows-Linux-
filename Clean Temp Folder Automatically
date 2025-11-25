@@ -1,0 +1,16 @@
+import os
+import shutil
+
+temp = r"C:\Windows\Temp"
+
+for file in os.listdir(temp):
+    path = os.path.join(temp, file)
+    try:
+        if os.path.isfile(path):
+            os.remove(path)
+        else:
+            shutil.rmtree(path)
+    except:
+        pass
+
+print("Temp folder cleaned.")
