@@ -1,0 +1,4 @@
+import os
+
+apps = os.popen("wmic product get name").read()
+print(apps)
